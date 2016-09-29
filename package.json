@@ -1,0 +1,22 @@
+{
+  "name": "naics-parser",
+  "version": "1.0.0",
+  "description": "Simple CSV to JSON converter for NAICS codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node cli.js"
+  },
+  "dependencies": {
+    "babyparse": "^0.4.6",
+    "bluebird": "^3.4.3",
+    "lodash": "^4.13.1",
+    "util": "^0.10.3",
+    "yargs": "^4.8.0"
+  },
+  "author": "Carlos Victorica-Orozco",
+  "license": "ISC",
+  "bin": {
+    "cf": "./cli.js"
+  }
+}
