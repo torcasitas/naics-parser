@@ -48,8 +48,8 @@ class ImportCommand {
         // console.log('row ' + cols + ' isMain ' + ((cols[0]) ? ' MAIN ' : 'specialty' ));
         if (cols[0]) {
           category = {};
-          category.id = cols[0];
-          category.name = cols[2].trim();
+          category[cols[0]] = cols[2].trim()
+          // category.name = cols[2].trim();
           category.subcategories = [];
           output.push(category); 
 
@@ -64,8 +64,7 @@ class ImportCommand {
         } else {
           if (cols[3] && cols[1] !== currentKey) {  // Specialties
             subcategory = {}
-            subcategory.id = cols[1];
-            subcategory.name = cols[3].trim();
+            subcategory[cols[1]] = cols[3].trim();
             subcategory.specialties = [];
             currentKey = cols[1];
             subcategory.specialties.push(cols[2].trim());
